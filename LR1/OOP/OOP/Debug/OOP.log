@@ -1,0 +1,15 @@
+﻿  Treangle.cpp
+c:\users\евгений\desktop\oop labs\lr1\oop\oop\treangle.cpp(50): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+c:\users\евгений\desktop\oop labs\lr1\oop\oop\treangle.cpp(51): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+c:\users\евгений\desktop\oop labs\lr1\oop\oop\treangle.cpp(52): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+c:\users\евгений\desktop\oop labs\lr1\oop\oop\treangle.cpp(66): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+c:\users\евгений\desktop\oop labs\lr1\oop\oop\treangle.cpp(67): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+c:\users\евгений\desktop\oop labs\lr1\oop\oop\treangle.cpp(68): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+c:\users\евгений\desktop\oop labs\lr1\oop\oop\treangle.cpp(72): warning C4101: min: неиспользованная локальная переменная
+c:\users\евгений\desktop\oop labs\lr1\oop\oop\treangle.cpp(93): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+c:\users\евгений\desktop\oop labs\lr1\oop\oop\treangle.cpp(94): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+c:\users\евгений\desktop\oop labs\lr1\oop\oop\treangle.cpp(95): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  Main.cpp
+  Создание кода...
+  OOP.vcxproj -> C:\Users\Евгений\Desktop\OOP Labs\LR1\OOP\Debug\OOP.exe
+  OOP.vcxproj -> C:\Users\Евгений\Desktop\OOP Labs\LR1\OOP\Debug\OOP.pdb (Full PDB)
