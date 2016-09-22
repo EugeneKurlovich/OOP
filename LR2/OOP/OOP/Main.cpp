@@ -1,16 +1,15 @@
 #include "stdafx.h"
 #include "Treangle.h"
 
-void result();
-
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	Treangle arr_obj[9];
+
+	Treangle *arr_obj = new Treangle[9];
 
 	Treangle one(0, 0, 2, 0, 1, 4); 	arr_obj[0] = one;
 	Treangle two(0, 0, 4, 0, 2, 6);		arr_obj[1] = two;
-	Treangle three(0, 0, 2, 0, 1, 3);	arr_obj[2] = three;
+	Treangle three(0, 0, 2, 0, 1, 8);	arr_obj[2] = three;
 	Treangle four(0, 0, 2, 0, 1, 2);	arr_obj[3] = four;
 	Treangle five(0, 0, 4, 0, 2, 4);	arr_obj[4] = five;
 	Treangle six(0, 0, 6, 0, 3, 6);		arr_obj[5] = six;
@@ -24,16 +23,20 @@ int main()
 
 		arr_obj[i].getdata();
 		arr_obj[i].len_perimetr();
-		arr_obj[i].type_treangle();
-	
+		arr_obj[i].all_type_treangles();
+
 		cout << endl;
 		cout << endl;
 	}
+	result();
 
-		result();
-		cout << endl;
-		one.max_perimetr(one, two, three, four, five, six, seven, eight, nine);
-		one.min_perimetr(one, two, three, four, five, six, seven, eight, nine);
+	cout << endl;
+
+	max_perimetr(arr_obj,9);
+
+	cout << endl;
+
+	min_perimetr(arr_obj,9);
 
 	system("pause");
 	return 0;

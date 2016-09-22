@@ -1,6 +1,10 @@
 #include "stdafx.h"
 #include "Treangle.h"
 
+static int max_rb = 0 , min_rb = 100;
+static int max_rs = 0 , min_rs = 100;
+static int max_pr = 0 , min_pr = 100;
+
 static int type_one = 0;
 static int type_two = 0;
 static int type_three = 0;
@@ -26,6 +30,7 @@ Treangle::~Treangle()
 {
 
 }
+
 void Treangle::setdata(int t_x1, int t_y1, int t_x2, int t_y2, int t_x3, int t_y3)
 {
 	x1 = t_x1; y1 = t_y1;
@@ -57,7 +62,50 @@ void Treangle::len_perimetr()
 	cout << "Периметр = " << result << "см." <<endl;
 }
 
-void Treangle::type_treangle()
+bool Treangle::type_treangle3()
+{
+	int A = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+	int B = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
+	int C = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
+
+	if (A != B && A != C && B != C)
+	{
+		return true;
+	}
+
+	else 
+		return false;
+}
+
+bool Treangle::type_treangle2()
+{
+	int A = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+	int B = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
+	int C = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
+
+	if (B == C && B!= A )
+	{
+		return true;
+	}
+	else
+		return false;
+}
+
+bool Treangle::type_treangle1()
+{
+	int A = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+	int B = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
+	int C = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
+
+	if (A == B && A == C && B == C)
+	{
+		return true;
+	}
+	else
+		return false;
+}
+
+void Treangle::all_type_treangles()
 {
 	int A = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 	int B = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
@@ -68,7 +116,7 @@ void Treangle::type_treangle()
 		int min;
 		cout << "Равносторонний треугольник" << endl;
 		type_one++;
-	
+
 	}
 
 	else if (B == C || A == B || A == C && !(A == B == C))
@@ -102,38 +150,55 @@ void result()
 	cout << type_three << " Произвольных треугольника" << endl;
 }
 
-int Treangle::max_perimetr(Treangle one, Treangle two, Treangle three, Treangle four, Treangle five, Treangle six, Treangle seven, Treangle eight, Treangle nine)
+void max_perimetr(Treangle *arr, int size)
 {
-	int max = 0;
-	max = one.get_perimetr();
-	if (two.get_perimetr() > max)  max = two.get_perimetr();
-	if (three.get_perimetr() > max)  max = three.get_perimetr();
-	if (four.get_perimetr() > max)  max = four.get_perimetr();
-	if (five.get_perimetr() > max)  max = five.get_perimetr();
-	if (six.get_perimetr() > max)  max = six.get_perimetr();
-	if (seven.get_perimetr() > max)  max = seven.get_perimetr();
-	if (eight.get_perimetr() > max)  max = eight.get_perimetr();
-	if (nine.get_perimetr() > max)  max = nine.get_perimetr();
+	
+	for (int i = 1; i < size; i++)
+		{
+		if (arr[i].type_treangle1() == true)
+			if (arr[i].get_perimetr() > max_rs) max_rs = arr[i].get_perimetr();
+		}
+		std::cout << "Максимальный периметр равноcторонних треугольников = " << max_rs << endl;
 
-	cout << "Максимальный периметр = " << max << endl;
+		
+		for (int i = 1; i < size; i++)
+		{
+			if (arr[i].type_treangle2() == true)
+				if (arr[i].get_perimetr() > max_rb) max_rb = arr[i].get_perimetr();
+		}
+		std::cout << "Максимальный периметр равнобедренных треугольников = " << max_rb << endl;
 
-	return max;
-}
-
-int Treangle::min_perimetr(Treangle one, Treangle two, Treangle three, Treangle four, Treangle five, Treangle six, Treangle seven, Treangle eight, Treangle nine)
+		
+		for (int i = 1; i < size; i++)
+		{
+			if (arr[i].type_treangle3() == true)
+				if (arr[i].get_perimetr() > max_pr) max_pr = arr[i].get_perimetr();
+		}
+		cout << "Максимальный периметр произвольных треугольников = " << max_pr << endl;
+	}
+	
+void min_perimetr(Treangle *arr, int size)
 {
-	int min = 0;
-	min = one.get_perimetr();
-	if (two.get_perimetr() < min)  min = two.get_perimetr();
-	if (three.get_perimetr() < min) min = three.get_perimetr();
-	if (four.get_perimetr() < min)  min = four.get_perimetr();
-	if (five.get_perimetr() < min)  min = five.get_perimetr();
-	if (six.get_perimetr() < min)  min = six.get_perimetr();
-	if (seven.get_perimetr() < min)  min = seven.get_perimetr();
-	if (eight.get_perimetr() < min)  min = eight.get_perimetr();
-	if (nine.get_perimetr() < min)  min = nine.get_perimetr();
+	for (int i = 0; i < size; i++)
+	{
+		if (arr[i].type_treangle1() == true)
+			if (arr[i].get_perimetr() < min_rs) min_rs = arr[i].get_perimetr();
+	}
+	std::cout << "Минимальный периметр равноcторонних треугольников = " << min_rs << endl;
 
-	cout << "Минимальный периметр = " << min << endl;
 
-	return min;
+	for (int i = 0; i < size; i++)
+	{
+		if (arr[i].type_treangle2() == true)
+			if (arr[i].get_perimetr() < min_rb) min_rb = arr[i].get_perimetr();
+	}
+	std::cout << "Минимальный периметр равнобедренных треугольников = " << min_rb << endl;
+
+
+	for (int i = 0; i < size; i++)
+	{
+		if (arr[i].type_treangle3() == true)
+			if (arr[i].get_perimetr() < min_pr) min_pr = arr[i].get_perimetr();
+	}
+	cout << "Минимальный периметр произвольных треугольников = " << min_pr << endl;
 }

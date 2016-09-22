@@ -14,9 +14,14 @@ public:
 	void setdata(int t_x1, int t_y1, int t_x2, int t_y2, int t_x3, int t_y3);
 	void getdata();
 	void len_perimetr();
-	void type_treangle();
+	bool type_treangle1();
+	bool type_treangle2();
+	bool type_treangle3();
+	void all_type_treangles();
 	int get_perimetr();
-	int min_perimetr(Treangle, Treangle, Treangle, Treangle, Treangle, Treangle, Treangle, Treangle, Treangle);
-	int max_perimetr(Treangle, Treangle, Treangle, Treangle, Treangle, Treangle, Treangle, Treangle, Treangle);
 	~Treangle();
 };
+
+void max_perimetr(Treangle *arr, int size);
+void min_perimetr(Treangle *arr, int size);
+void result();
