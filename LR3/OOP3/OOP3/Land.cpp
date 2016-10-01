@@ -6,21 +6,21 @@ Land::Land()
 	cout << "Конструктор класса Land" << endl;
 }
 
-void Land::SetTypeLand()
+void Land::SetArea()
 {
-	cout << "Введите тип почвы : " ;
-	cin >> TypeLand;
+	cout << "Введите площадь суши (кв.км.) : " ;
+	cin >> area;
 	cout << endl;
 }
 
-string Land::GetTypeLand()
+double Land::GetArea()
 {
-	return TypeLand;
+	return area;
 }
 
-void Land::ShowTypeLand()
+void Land::ShowArea()
 {
-	cout << "Тип почвы : " << TypeLand << endl;
+	cout << "Площадь суши (кв.км.) : " << area << endl;
 }
 
 Land::~Land()

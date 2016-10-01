@@ -9,54 +9,68 @@ int main()
 {
 	setlocale(LC_ALL , "Russian");
 
-	Continent a;
-	Island b;
-	State c;
-	Land d;
+	Land a;
+	Continent b;
+	Island c;
+	State d;
 	Sea e;
 
 	cout << endl;
-	cout << "Continent" << endl;
-	a.SetName();
-	a.Show_Name();
+	cout << "Класс : Land" << endl;
+
+	a.SetArea();
+	a.ShowArea();
 
 	cout << endl;
 
-	cout << "Island" << endl;
+	cout << "Класс : Continent" << endl;
+
 	b.SetName();
 	b.SetArea();
-	b.Show_Name();
+	b.ShowName();
 	b.ShowArea();
 
 	cout << endl;
 
-	cout << "State" << endl;
+	cout << "Класс : Island" << endl;
+
 	c.SetName();
 	c.SetArea();
 	c.SetPopulation();
-	c.Show_Name();
+	c.ShowName();
 	c.ShowArea();
 	c.ShowPopulation();
 
 	cout << endl;
-	cout << "Land" << endl;
+
+	cout << "Класс : State" << endl;
+
 	d.SetName();
 	d.SetArea();
-	d.SetTypeLand();
-	d.Show_Name();
+	d.SetPopulation();
+	d.SetCapital();
+	d.ShowName();
 	d.ShowArea();
-	d.ShowTypeLand();
+	d.ShowPopulation();
+	d.ShowCapital();
 
 	cout << endl;
-	cout << "Sea" << endl;
+
+	cout << "Класс : Sea" << endl;
+
 	e.SetName();
+	e.SetArea();
 	e.SetMaxDepth();
-	e.Show_Name();
-
+	e.ShowName();
+	e.ShowArea();
 	e.ShowMaxDepth();
-
+	
+	
 	cout << endl;
-
+	cout << "Класс вложенный в Sea " << endl;
+	e.f.SetSpeed();
+	e.f.ShowSpeed();
+	cout << endl;
 	system("pause");
 	return 0;
 }

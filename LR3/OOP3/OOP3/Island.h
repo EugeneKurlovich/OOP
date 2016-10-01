@@ -5,12 +5,12 @@
 class Island :
 public Continent
 {
-	double area;
+	double population;
 
 public:
 	Island();
-	void SetArea();
-	double GetArea();
-	void ShowArea();
+	void SetPopulation();
+	double GetPopulation();
+	void ShowPopulation();
 	~Island();	
 };

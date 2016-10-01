@@ -1,15 +1,13 @@
 #pragma once
 #include "stdafx.h"
-#include "Island.h"
 
-class Land : 
-public Island
+class Land 
 {
-	string TypeLand;
+	double area;
 public:
 	Land();
-	void SetTypeLand();
-	string GetTypeLand();
-	void ShowTypeLand();
+	void SetArea();
+	double GetArea();
+	void ShowArea();
 	~Land();
 };

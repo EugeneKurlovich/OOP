@@ -19,7 +19,7 @@ string Continent::GetName()
 	return name;
 }
 
-void Continent::Show_Name()
+void Continent::ShowName()
 {
 	cout << "Название : " << name << endl;
 }

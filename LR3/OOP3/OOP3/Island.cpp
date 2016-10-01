@@ -6,21 +6,21 @@ Island::Island()
 	cout << "Конструктор класса Island " << endl;
 }
 
-void Island::SetArea()
+void Island::SetPopulation()
 {
-	cout << "Введите площадь (кв.км.): ";
-	cin >> area;
+	cout << "Введите население (млн.чел.): ";
+	cin >> population;
 	cout << endl;
 }
 
-double Island::GetArea()
+double Island::GetPopulation()
 {
-	return area;
+	return population;
 }
 
-void Island::ShowArea()
+void Island::ShowPopulation()
 {
-	cout << "Площадь (кв.км.) : " << area << endl;
+	cout << "Население (млн.чел.) : " << population << endl;
 }
 
 Island::~Island()

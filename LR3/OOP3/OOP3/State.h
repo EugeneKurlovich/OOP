@@ -6,12 +6,12 @@
 class State :
 	public Island
 {
-	double population;
+	string capital;
 
 public:
 	State();
-	void SetPopulation();
-	double GetPopulation();
-	void ShowPopulation();
+	void SetCapital();
+	string GetCapital();
+	void ShowCapital();
 	~State();
 };

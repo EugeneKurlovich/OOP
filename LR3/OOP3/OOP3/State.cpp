@@ -6,21 +6,21 @@ State::State()
 	cout << "Конструктор класса State" << endl;
 }
 
-void State::SetPopulation()
+void State::SetCapital()
 {
-	cout <<"Введите население (млн.чел.) : " ;
-	cin >> population;
+	cout <<"Введите столицу : " ;
+	cin >> capital;
 	cout << endl;
 }
 
-double State::GetPopulation()
+string State::GetCapital()
 {
-	return population;
+	return capital;
 }
 
-void State::ShowPopulation()
+void State::ShowCapital()
 {
-	cout << "Население (млн.чел.) : " << population << endl;
+	cout << "Столица : " << capital << endl;
 }
 
 State::~State()
