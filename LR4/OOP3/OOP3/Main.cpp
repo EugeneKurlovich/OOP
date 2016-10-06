@@ -111,6 +111,27 @@ int main()
 	printer.iAmPrinting(dd);
 	printer.iAmPrinting(ee);
 
+
+	//8 преобразование 
+
+	//преобразование производного - базовый
+	Continent *Z1 = new Continent();
+	Z1->set();
+	Z1->SetName();
+	Land *z2 = static_cast<Continent*>(Z1);
+	z2->GetArea();
+
+	//преобразование базовый - производный
+	Continent *Z3 = new Continent();
+	Z3->set();
+	Z3->SetName();
+	Land *Z4 = dynamic_cast<Continent*>(Z3);
+	Z4->GetArea();
+
+	//убирает модификатор конст
+	const Island *z5 = new Island();
+	Island *Z6 = const_cast<Island*>(z5);
+
 	system("pause");
 	return 0;
 }
