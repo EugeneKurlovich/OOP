@@ -7,7 +7,7 @@ class Controler:
 {
 
 public:
-	void seas(Planet m);
-	void islands_Alphavite(Planet n);
-	void state(Planet b);
+	void seas(Planet m, int ssize);
+	void islands(Planet n, int ssize);
+	void state(Planet b, int ssize);
 };

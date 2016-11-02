@@ -12,9 +12,9 @@
 class Planet
 {
 public:
-	int size = 0;
+
 	Abstract *Arr[100];
-	void set(Abstract *obj);
-	void showArr();
-	void delet();
+	int set(Abstract *obj, int size);
+	void showArr(int ssize);
+	void delet(int ssize);
 };

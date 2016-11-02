@@ -2,10 +2,10 @@
 #include "stdafx.h"
 #include "Controler.h"
 
-void Controler::seas(Planet m)
+void Controler::seas(Planet m, int ssize)
 {
 	int summa = 0;
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i <ssize; i++)
 	{
 
 		if (dynamic_cast<Sea*>(m.Arr[i]) != NULL && !(dynamic_cast<Island*>(m.Arr[i])))
@@ -16,43 +16,38 @@ void Controler::seas(Planet m)
 	cout << "Кличество морей : " << summa << endl;
 }
 
-void Controler::islands_Alphavite(Planet n)
+void Controler::islands(Planet n, int ssize)
 {
-	string arr[100];
+	string arrs[100];
 	Island *a;
 	int j = 0;
-	for (int i = 0; i < arr[i].length(); i++)
+	for (int i = 0; i <ssize; i++)
 	{
 		a = dynamic_cast<Island*>(n.Arr[i]);
 		if (a != NULL)
 		{
-			arr[j] = a->getname();
+			arrs[j] = a->getname();
 			j++;
 		}
 	}
 	cout << "Острова : ";
 
-	for (int i = 0; i < j-1; i++)
-		for (int f = i ; f < j; f++) {
-			if (strcmp(arr[i].c_str(), arr[j].c_str())>0) swap(arr[i], arr[j]);
-		}
-
 	for (int i = 0; i < j; i++)
 	{
 		
-		cout << arr[i] << " ";
+		cout << arrs[i] << " ";
 		
 	}
 	cout << endl;
 }
 
-void Controler::state(Planet b)
+void Controler::state(Planet b, int ssize)
 {
 	Continent *a,*t,*r;
 	string ccname;
 	cout << "Введите имя интересуещего континента : ";
 	cin >> ccname;
-	for (int i = 0; i < 6; i++)
+	for (int i = 0; i < ssize; i++)
 	{
 		r = dynamic_cast<Continent*>(b.Arr[i]);
 		if (r != NULL) {

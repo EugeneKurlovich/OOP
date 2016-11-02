@@ -57,21 +57,30 @@ int main()
 	Sea *ee = &e;
 	Sea *gg = &g;
 
+
+	int ssize = 0;
 	Planet r;  
-		r.set(bb);
-		r.set(cc);
-		r.set(pp);
-		r.set(dd);
-		r.set(ee);
-		r.set(gg);
+		r.set(bb,ssize);
+		ssize++;
+		r.set(cc,ssize);
+		ssize++;
+		r.set(pp, ssize);
+		ssize++;
+		r.set(dd, ssize);
+		ssize++;
+		r.set(ee, ssize);
+		ssize++;
+		r.set(gg, ssize);
+		ssize++;
 		
-	//r.showArr();
-	//r.delet();
-	//r.showArr();
+	r.showArr(ssize);
+	r.delet(ssize);
+	r.showArr(ssize);
 	Controler s;
-	s.seas(r);
-	s.islands_Alphavite(r);
-	s.state(r);
+	s.seas(r,ssize);
+	s.islands(r,ssize);
+	s.state(r,ssize);
+
 	system("pause");
 	return 0;
 }
