@@ -43,9 +43,10 @@ public:
 	Stack *top, *next;
 
 	Stack();
-	operator bool();
 	void push(st x);
 	st pop();
+
+	friend void operator >(Stack &x, Stack &y);
 	void out();
 	~Stack();
 
@@ -66,15 +67,44 @@ public:
 			 return -1;
 		 }
 		 cout << "Извлечённый элемент : " << top->value << endl;
-		 return 0;
+		 return top->value;
 	 }
 
+	operator bool() {
+		 Stack *temp = top;
 
+		 
+			 if (!top)
+				 return true;
+			 else
+		 return false;
+	 }
 
-	friend st operator >(Stack &A, Stack &B)
+	 friend void operator >(Stack<st> &B, Stack<st> &A)
 	 {
 		 B = A;
-		 return B;
+		 st arr[20];
+
+		 for (int i = 0; i < A.size; i++)
+		 {
+			 arr[i] = B.top->value;
+			 B.top = B.top->next;
+		 }
+
+		 for (int i = 0; i < A.size; i++)
+		 {
+			 for (int j = A.size - 1; j > i; j--)
+			 {
+				 if (arr[j] > arr[j - 1])
+				 {
+					 swap(arr[j], arr[j - 1]);
+				 }
+			 }
+		 }
+		 for (int i = 0; i <A.size; i++)
+		 {
+			 B.push(arr[i]);
+		 }
 	 }
 
 };
@@ -111,22 +141,13 @@ st Stack<st>::pop() {
 	}
 
 	st topValue = top->value;
-	top = top->next;
 	size--;
 
 	cout << "Извлечённый элемент " <<top->value << endl;
 	return topValue;
 }
 
-template <typename st>
-Stack<st>::operator bool() {
-	Stack *temp = top;
 
-	if (temp != 0)
-		return true;
-	else
-		return false;
-}
 
 template <typename st>
 void Stack<st>::out()
@@ -194,11 +215,29 @@ int main() {
 	F.push(D);
 	F.push(E);
 
+
 	F.out();
 
 	min(A);
 	
-	
+	Stack <int> U;
+	U > A;
+	U.out();
+
+	if (bool(U))
+	{
+		cout << "Стек пуст" << endl;
+	}
+	else cout << "Есть элементы" << endl;
+
+
+	Stack <int>j;
+
+	if (bool(j))
+	{
+		cout << "Стек пуст" << endl;
+	}
+	else cout << "Есть элементы" << endl;
 
 	system("pause");
 	return 0;
