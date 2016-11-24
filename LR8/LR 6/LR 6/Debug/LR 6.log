@@ -1,7 +1,7 @@
 ﻿  LR 6.cpp
-d:\oop2repoz\lr8\lr 6\lr 6\lr 6.cpp(280): warning C4286: exception_two &: перехвачено базовым классом ("exception_one &") в строке 275
-d:\oop2repoz\lr8\lr 6\lr 6\lr 6.cpp(285): warning C4286: exception_three &: перехвачено базовым классом ("exception_one &") в строке 275
-d:\oop2repoz\lr8\lr 6\lr 6\lr 6.cpp(290): warning C4286: exception_four &: перехвачено базовым классом ("exception_one &") в строке 275
-d:\oop2repoz\lr8\lr 6\lr 6\lr 6.cpp(295): warning C4286: exception_five &: перехвачено базовым классом ("exception_one &") в строке 275
+d:\oop2repoz\lr8\lr 6\lr 6\lr 6.cpp(279): warning C4286: exception_two &: перехвачено базовым классом ("exception_one &") в строке 274
+d:\oop2repoz\lr8\lr 6\lr 6\lr 6.cpp(285): warning C4286: exception_three &: перехвачено базовым классом ("exception_one &") в строке 274
+d:\oop2repoz\lr8\lr 6\lr 6\lr 6.cpp(290): warning C4286: exception_four &: перехвачено базовым классом ("exception_one &") в строке 274
+d:\oop2repoz\lr8\lr 6\lr 6\lr 6.cpp(295): warning C4286: exception_five &: перехвачено базовым классом ("exception_one &") в строке 274
   LR 6.vcxproj -> D:\OOP2repoz\LR8\LR 6\Debug\LR 6.exe
   LR 6.vcxproj -> D:\OOP2repoz\LR8\LR 6\Debug\LR 6.pdb (Full PDB)

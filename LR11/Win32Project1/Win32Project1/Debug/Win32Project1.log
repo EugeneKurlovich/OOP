@@ -1,0 +1,4 @@
+﻿  WinMain.cpp
+f:\oop2repoz\lr11\win32project1\win32project1\winmain.cpp(9): warning C4101: PS: неиспользованная локальная переменная
+  Win32Project1.vcxproj -> F:\OOP2repoz\LR11\Win32Project1\Debug\Win32Project1.exe
+  Win32Project1.vcxproj -> F:\OOP2repoz\LR11\Win32Project1\Debug\Win32Project1.pdb (Full PDB)

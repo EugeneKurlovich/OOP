@@ -4,10 +4,17 @@ using namespace std;
 class Land
 {
 public:
+
 	double area;
 	Land();
 	void SetArea();
 	~Land();
+	friend bool   operator > (Land B, Land C)
+	{
+		if (B.area > C.area)
+			return true;
+		else return false;
+	}
 };
 
 Land::Land()
@@ -21,6 +28,8 @@ void Land::SetArea()
 	cin >> area;
 	cout << endl;
 }
+
+
 
 ostream &operator << (ostream &out , Land &obj )
 {
@@ -50,7 +59,7 @@ public:
 	void out();
 	~Stack();
 
-	template <typename st>
+	//template <typename st>
 	 st operator +(st y) {
 		Stack *newElement = new Stack;
 		newElement->value = y;
@@ -164,10 +173,9 @@ void Stack<st>::out()
 
 
 template <typename st>
-void min (Stack<st> A)
+int min (Stack<st> A, st el)
 {
-	st el;
-	cin >> el;
+
 	int i = 0;
 	Stack<st> *temp = A.top;
 	while  (temp != NULL)
@@ -180,7 +188,7 @@ void min (Stack<st> A)
 		temp = temp->next;
 	}
 	cout << i << "элементов больше чем заданный" << endl;
-	
+	return i;
 }
 
 int main() {
@@ -215,10 +223,10 @@ int main() {
 	F.push(D);
 	F.push(E);
 
-
+	
 	F.out();
 
-	min(A);
+	min(F,C);
 	
 	Stack <int> U;
 	U > A;

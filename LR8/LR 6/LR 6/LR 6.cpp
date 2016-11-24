@@ -249,8 +249,8 @@ int main() {
 		//Исключения :
 
 	/*	j.pop();*/
-		//j.out();
-	/*	j.push(-1);*/
+	/*	j.out();*/
+		/*j.push(-1);*/
 
 		//int a = 2, b = 0,c;
 		//if (b == 0) throw exception_four();
@@ -271,30 +271,34 @@ int main() {
 
 	
 
-	catch (exception_one &obj)
-	{
-		cout << obj.er() << endl;
-	}
+		catch (exception_one &obj)
+		{
+			cout << obj.er() << endl;
+		}
 
-	catch (exception_two &obj)
-	{
-		cout << obj.er() << endl;
-	}
+		catch (exception_two &obj)
+		{
+			cout << obj.er() << endl;
 
-	catch (exception_three &obj)
-	{
-		cout << obj.er() << endl;
-	}
+		}
 
-	catch (exception_four &obj)
-	{
-		cout << obj.er() << endl;
-	}
+		catch (exception_three &obj)
+		{
+			cout << obj.er() << endl;
+		}
 
-	catch (exception_five &obj)
-	{
-		cout << obj.er() << endl;
-	}
+		catch (exception_four &obj)
+		{
+			cout << obj.er() << endl;
+		}
+
+		catch (exception_five &obj)
+		{
+			cout << obj.er() << endl;
+		}
+
+
+
 
 	system("pause");
 	return 0;
