@@ -1,12 +1,10 @@
 #include <Windows.h>
 
 HINSTANCE HINST;
-HWND CreateChildWindow();
 int COL_WINDOW = 0;
 
 LRESULT CALLBACK WndProcChild(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-	PAINTSTRUCT PS;
 	switch (message)
 	{
 	case WM_CREATE:
@@ -15,7 +13,7 @@ LRESULT CALLBACK WndProcChild(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPa
 		COL_WINDOW--;
 		break;
 	case WM_CHAR:
-		DestroyWindow(hWnd); break;//
+		DestroyWindow(hWnd); break;
 	default:
 		return DefWindowProc(hWnd, message, wParam, lParam);
 	}
@@ -37,10 +35,9 @@ HWND CreateChildWindow()
 	WindowClass.lpszMenuName = 0;
 	WindowClass.lpszClassName = TEXT("ChildWClass");
 
-	//Зарегистируем класс окна
+	
 	RegisterClass(&WindowClass);
 
-	//Создаем переменную, в которой поместим идентификатор окна
 	HWND hWndC;
 
 	WCHAR* title = new WCHAR[7];
@@ -57,7 +54,7 @@ HWND CreateChildWindow()
 
 
 	hWndC = CreateWindow(TEXT("ChildWClass"), title,
-		WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 300, 300, NULL, NULL, HINST, NULL);
+	WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 300, 300, NULL, NULL, HINST, NULL);
 	ShowWindow(hWndC, SW_NORMAL);
 	UpdateWindow(hWndC);
 	COL_WINDOW++;
@@ -126,7 +123,8 @@ LONG WINAPI WndProc(HWND hwnd, UINT Message, WPARAM wparam, LPARAM lparam)
 		if (IDOK == MessageBox(hwnd, L"Выйти из Программы?", L"Выход", MB_OKCANCEL | MB_ICONQUESTION | MB_DEFBUTTON2))
 
 			SendMessage(hwnd, WM_DESTROY, NULL, NULL);
-		break;	}
+		break;
+	}
 
 	case WM_LBUTTONUP:
 	{
