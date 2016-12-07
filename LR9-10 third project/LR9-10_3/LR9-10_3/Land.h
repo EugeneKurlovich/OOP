@@ -12,6 +12,18 @@ public:
 	void SetArea(double);
 	double GetArea();
 	void ShowArea();
-	friend ostream& operator << (ostream& out, Land& obj);
+	bool operator== (const Land& param) const
+	{
+		if (this->area == param.area)
+			return true;
+		else
+			return false;
+	}
+	bool operator== (int);
+	friend ostream& operator<<(ostream& os, const Land& obj);
+	bool operator< (const Land& q) const
+	{
+		return (this->area < q.area);
+	}
 	~Land();
 };

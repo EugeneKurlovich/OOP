@@ -141,8 +141,9 @@ public:
 				counter++;
 				if (counter == 10)
 				{
-					KillTimer(1);
+					KillTimer(0);
 					counter = 0;
+			
 				}
 			}
 		}
@@ -150,8 +151,6 @@ public:
 
 	void CMyMainWnd::OnPaint()
 	{
-
-
 		CPaintDC* pDC = new CPaintDC(this);
 		pDC->SelectObject(ppn);
 		switch (flag) {

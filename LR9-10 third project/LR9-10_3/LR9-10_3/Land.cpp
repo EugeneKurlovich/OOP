@@ -11,6 +11,14 @@ Land::Land(double Area)
 	area = Area;
 }
 
+
+bool Land::operator== (int ind)
+{
+	if (this->GetArea() == ind)
+		return true;
+	else
+		return false;
+}
 void Land::SetArea(double el)
 {
 	this->area = el;
@@ -33,10 +41,10 @@ void Land::ShowArea()
 	cout << "Площадь суши (кв.км.) : " << area << endl;
 }
 
-ostream& operator<<(ostream& out, Land& obj)
+ostream& operator<<(ostream& os, const Land& obj)
 {
-	out << obj.GetArea();
-	return out;
+	os << obj.area;
+	return os;
 }
 
 Land::~Land()

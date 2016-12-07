@@ -2,8 +2,12 @@
 #include <tchar.h>
 #include <iostream>
 #include <algorithm>
-#include <map>
+#include <set>
 #include <string>
+#include <iterator>
+#include <list>
+#include <functional>
+#include <vector>
 
 using namespace std;
 
