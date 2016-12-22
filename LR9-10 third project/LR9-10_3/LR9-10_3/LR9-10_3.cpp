@@ -116,8 +116,8 @@ int main()
 	cout << endl;
 
 	auto fc = std::plus<int>();
-	std::transform(aa.begin(), aa.end(), bb.begin(), bb.begin(), MyOwnFunctor<int, std::plus>(fc));
-	copy(cc.begin(), cc.end(), ostream_iterator<int>(cout, " "));																	//норм
+	std::transform(aa.begin(), aa.end(), bb.begin(), cc.begin(), MyOwnFunctor<int, std::plus>(fc));
+	copy(cc.begin(), cc.end(), ostream_iterator<int>(cout, " "));																
 	cout << endl;
 	cout << "Binder\n";
 	binder2nd< less<int> > less_than(less<int>(), 4);

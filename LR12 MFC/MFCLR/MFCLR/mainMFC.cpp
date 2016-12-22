@@ -3,16 +3,16 @@
 
 int counter = 0;
 int times = 0;
-class CMyMainWnd : public CFrameWnd {
 
+class CMyMainWnd : public CFrameWnd {
 public:
 	int x; int y; int flag;
 	int x1, y1, x2, y2;
-	CRect rect;
 	CBrush *ppn = new CBrush;
+
 	CMyMainWnd() {
 		Create(NULL, L"Рисование окружности");
-		SetTimer(0, 1000, NULL);
+		SetTimer(0, 2000, NULL);
 		x1 = 0, y1 = 0, x2 = 0, y2 = 0;
 		ppn = new CBrush(RGB(255, 0, 0));
 
@@ -130,8 +130,7 @@ public:
 		times++;
 		if (flag == 6)
 		{
-			if (times % 2 == 0)
-			{
+		
 				CClientDC dc(this);
 
 				dc.TextOutW(x, y, L"");
@@ -146,7 +145,7 @@ public:
 			
 				}
 			}
-		}
+		
 	}
 
 	void CMyMainWnd::OnPaint()
