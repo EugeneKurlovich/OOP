@@ -1,0 +1,6 @@
+﻿  MyDll.cpp
+d:\lab-13-dll\mydll\mydll\mydll.cpp(14): warning C4101: result: неиспользованная локальная переменная
+d:\lab-13-dll\mydll\mydll\mydll.cpp(34): warning C4101: result: неиспользованная локальная переменная
+     Создается библиотека D:\LAB-13-DLL\MyDLL\Debug\MyDLL.lib и объект D:\LAB-13-DLL\MyDLL\Debug\MyDLL.exp
+  MyDLL.vcxproj -> D:\LAB-13-DLL\MyDLL\Debug\MyDLL.dll
+  MyDLL.vcxproj -> D:\LAB-13-DLL\MyDLL\Debug\MyDLL.pdb (Full PDB)
